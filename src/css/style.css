@@ -1,0 +1,145 @@
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: var( --neutral-dark);
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.nft-card{
+    max-width: 320px;
+    background-color: var(--neutral-medium);
+    border-radius: 18px;
+    padding: 23px;
+}
+
+.img-link .image{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.img-link{
+    position: relative;
+    display: flex;
+}
+
+.img-link::before{
+    content: '';
+    background-color: var(--primary-medium);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 7px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+
+}
+
+.img-link::after{
+    content: '';
+    background: url(../images/icon-view.svg) no-repeat center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.img-link:hover::before{
+    display: block;
+    opacity: 0.4;
+}
+.img-link:hover::after{
+    opacity: 1;
+}
+
+.title-link .title{
+    font-size: 20px;
+    color: #ffffff;
+    margin: 18px 0 18px;
+}
+
+.title:hover{
+    color: var(--primary-medium);
+    transition: 0.3s ease-in-out;
+}
+
+.about{
+    color: var(--primary-soft);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.info .price{
+    color: var(--primary-medium);
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.info .price::before{
+    content: '';
+    background: url(../images/icon-ethereum.svg) no-repeat center;
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.info .days-left{
+    color: var(--primary-soft);
+    font-size: 14px;
+    display: flex;
+}
+
+.info .days-left::before{
+    content: '';
+    background: url(../images/icon-clock.svg) no-repeat center;
+    display: inline-block;
+    width: 15px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.creator{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--neutral-soft);
+    padding-top: 10px;
+}
+
+.creator .avatar{
+    max-width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 15px;
+    
+}
+
+.creator .text{
+    color: var(--primary-soft);
+    font-size: 14.5px;
+}
+
+.creator .text .name{
+    color: #ffffff;
+}
+
+.creator .text .name:hover{
+    color: var(--primary-medium);
+    transition: 0.3s ease-in-out;
+}
+
